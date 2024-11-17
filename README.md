@@ -23,7 +23,7 @@ This project utilizes core AWS networking components to create a modern three ti
 ![architecture diagram](./assets/aws-three-tier-network.png)
 
 
-## Application Flow UML Diagram
+## Application Flow Sequence Diagram
 
 ```mermaid
 sequenceDiagram
