@@ -29,7 +29,7 @@ This project utilizes core AWS networking components to create a modern three ti
 sequenceDiagram
 Client ->> Load Balancer: 1. Call API
 Load Balancer ->> Backend Hosts: 2. Route request
-Backend Hosts ->> Database: 3. call DB
+Backend Hosts ->> Database: 3. Call DB
 Database-x Backend Hosts: 4. Return DB call
 Backend Hosts-x Load Balancer: 5. Return server response
 Load Balancer-x Client: 6. Serve response
