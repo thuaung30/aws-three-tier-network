@@ -41,6 +41,34 @@ Load Balancer-x Client: 6. Serve response
 - Terraform ( version >= 1.9.6, refer to [installation docs](https://developer.hashicorp.com/terraform/install))
 - AWS Account and IAM keys (refer to [AWS docs for generating IAM keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-keys-admin-managed.html#admin-create-access-key))
 
+### Code Structure
+
+Consists of four primary modules (compute, database, loadbalancing, network) and top level main.tf.
+
+```
+.
+├── main.tf
+├── modules
+│   ├── compute
+│   │   ├── main.tf
+│   │   ├── output.tf
+│   │   └── variables.tf
+│   ├── database
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   ├── loadbalancing
+│   │   ├── main.tf
+│   │   ├── output.tf
+│   │   └── variables.tf
+│   └── network
+│       ├── main.tf
+│       ├── output.tf
+│       └── variables.tf
+├── output.tf
+└── scripts
+    └── bootstrap.sh
+```
+
 ###  Procedure
 
 Clone the repository.
