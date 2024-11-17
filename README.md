@@ -4,13 +4,14 @@ This project utilizes core AWS networking components to create a modern three ti
 
 ## Core network components
 
-- VPC
+- VPC (Virtual Private Cloud)
 - Internet Gateway (to provide internet access for VPC)
 - NAT Gateway (to provide internet access for private subnets)
 - Network Access Control Lists (default allow)
 - Private/Public Subnets
 - Route tables
 - Application Load Balancer
+- Security groups
 - Target Groups
 
 ## Network Segmentation Diagram
