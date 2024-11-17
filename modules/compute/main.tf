@@ -3,6 +3,11 @@ locals {
   default_instance_type = "t2.micro"
 }
 
+data "aws_lb_target_group" "this" {
+  arn  = var.lb_tg_arn
+  name  = var.lb_tg_name
+}
+
 # SSH KEY FOR BASTION HOST
 resource "tls_private_key" "main" {
   algorithm = "RSA"
@@ -133,7 +138,7 @@ resource "aws_autoscaling_group" "backend" {
   max_size            = try(var.backend.max_size, 0)
   desired_capacity    = try(var.backend.desired_capacity, 0)
 
-  # target_group_arns = [data.aws_lb_target_group.three_tier_tg.arn]
+  target_group_arns = [data.aws_lb_target_group.this.arn]
 
   launch_template {
     id      = aws_launch_template.backend.id

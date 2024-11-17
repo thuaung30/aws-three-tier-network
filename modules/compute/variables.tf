@@ -8,6 +8,16 @@ variable "vpc_id" {
     description = "VPC ID"
 }
 
+variable "lb_tg_arn" {
+    description = "Loadbalancer target group arn"
+    type = string
+}
+
+variable "lb_tg_name" {
+    description = "Loadbalancer target group arn"
+    type = string
+}
+
 
 variable "bastion" {
     type = any
